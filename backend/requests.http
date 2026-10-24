@@ -1,0 +1,20 @@
+### Health check
+GET http://localhost:5000/api/health
+
+### Valid subscribe (sends a real email, use your own address)
+POST http://localhost:5000/api/subscribe
+Content-Type: application/json
+
+{ "email": "your-email@example.com" }
+
+### Invalid email (should be 400)
+POST http://localhost:5000/api/subscribe
+Content-Type: application/json
+
+{ "email": "not-an-email" }
+
+### Missing email (should be 400)
+POST http://localhost:5000/api/subscribe
+Content-Type: application/json
+
+{}

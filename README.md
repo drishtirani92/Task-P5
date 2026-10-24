@@ -28,28 +28,3 @@ backend/    ExpressJS server (POST /api/subscribe)
 | Email API refused the request | 502 | Could not send the email |
 | Missing API key or other server problem | 500 | Something went wrong |
 | Backend not running | none | Could not reach the server |
-
-## Run it
-
-You need two terminals.
-
-Backend:
-
-```bash
-cd backend
-npm install
-cp .env.example .env     # add your Mailjet keys
-npm run dev
-```
-
-Frontend:
-
-```bash
-cd frontend
-npm install
-cp .env.example .env     # add your Firebase values and keep VITE_API_URL
-npm run dev
-```
-
-Open http://localhost:5173 and use the footer to subscribe.
-Both `.env` files are ignored by Git. Only the `.env.example` files are committed.
